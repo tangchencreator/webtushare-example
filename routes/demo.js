@@ -1,7 +1,7 @@
 var express = require('express');
 var request = require('request');
 var router = express.Router();
-var api = "http://www.vccdd.loan:3000/tushareapi/realtimeboxoffice";
+var api = "http://localhost:4000/tushareapi/realtimeboxoffice";
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('demo/index', { title: 'webtushare', subtitle: 'tushare的接口实现' });
