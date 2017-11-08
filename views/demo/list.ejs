@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="applicable-device"content="mobile">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta http-equiv="Cache-Control" content="no-transform" />
+
+    <link rel='stylesheet' href='/stylesheets/demos.css' />
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+  </head>
+  <body ontouchstart>
+        <% for(var i=0; i < movices.length; i++) {%>
+            <div class="weui-form-preview">
+            <div class="weui-form-preview__hd">
+                    <label class="weui-form-preview__label">电影名</label>
+                    <em class="weui-form-preview__value"><%= movices[i].movie_name %></em>  
+                </div>
+                <div class="weui-form-preview__bd">
+                    <div class="weui-form-preview__item">
+                        <label class="weui-form-preview__label">排名</label>
+                        <span class="weui-form-preview__value"><%= movices[i].irank %></span>
+                    </div>
+                    <div class="weui-form-preview__item">
+                        <label class="weui-form-preview__label">实时票房（万）</label>
+                        <span class="weui-form-preview__value"><%= movices[i].box_office %></span>
+                    </div>
+                    <div class="weui-form-preview__item">
+                            <label class="weui-form-preview__label">票房占比 （%）</label>
+                            <span class="weui-form-preview__value"><%= movices[i].box_per %></span>
+                    </div>
+                </div>
+                <div class="weui-form-preview__ft">
+                        <button type="submit" class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">查看详情</button>
+                </div>
+            </div>
+            <% if(i != (movices.length - 1)) {%>
+                <br>
+            <% } %>
+        <% } %>
+   </body>
+    <script src="//cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/swiper.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/city-picker.min.js"></script>
+</html>
